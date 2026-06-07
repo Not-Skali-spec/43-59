@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Przykład użycia pętli Milcewicz</title>
+
+  <script language="JavaScript">
+    var pow_mil = parseInt(prompt("ile razy powtórzyć:"));
+    var ini_mil = prompt("Podaj twoje inicjały:");
+    for (var i_mil = 1; i_mil <= pow_mil; i_mil++) {
+      for (var k_mil = 1; k_mil <= i_mil; k_mil++) {
+        document.write("&nbsp;");
+      }
+      document.write(i_mil + "_" + ini_mil + "_"+i_mil+ "<br>");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

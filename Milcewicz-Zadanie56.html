@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Zadanie 56 - Prostokąt</title>
+</head>
+<body style="font-family: monospace; font-size: 20px; line-height: 1.2;">
+
+<script>
+// 1. Pobieranie danych od użytkownika
+var imie = prompt("Podaj swoje imię:");
+var nazwisko = prompt("Podaj swoje nazwisko:");
+
+// 2. Obliczanie wymiarów a i b zgodnie ze wzorami z zadania
+var a = (nazwisko.length % 4) + 5;  // wysokość (pion)
+var b = (imie.length % 6) + 20;     // szerokość (poziom)
+
+// Wyświetlenie obliczonych wymiarów dla jasności
+document.write("Wymiary prostokąta: a = " + a + ", b = " + b + "<br><br>");
+
+// --- RYSOWANIE PROSTOKĄTA (DOKŁADNIE 3 PĘTLE) ---
+
+// Pętla 1: Górna pozioma linia z gwiazdek
+for (var i = 1; i <= b; i++) {
+  document.write("*");
+}
+document.write("<br>");
+
+// Pętla 2: Środkowe pionowe gwiazdki (boki prostokąta)
+// Wysokość środka to całkowita wysokość minus góra i dół (a - 2)
+var srodek_wysokosc = a - 2; 
+
+// Przygotowanie pustego środka linii: b - 2 spacji (zamiast pętli, używamy prostej metody repeat)
+var spacje = "&nbsp;".repeat(b - 2);
+
+for (var i = 1; i <= srodek_wysokosc; i++) {
+  document.write("*" + spacje + "*<br>");
+}
+
+// Pętla 3: Dolna pozioma linia z gwiazdek
+for (var i = 1; i <= b; i++) {
+  document.write("*");
+}
+</script>
+
+</body>
+</html>

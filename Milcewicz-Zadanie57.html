@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57 Milcewicz</title>
+</head>
+<body>
+
+<script>
+    var l1_t_mil = parseInt(prompt("Podaj pierwszą liczbę (od 20 do 60):"));
+    if (l1_t_mil < 20 || l1_t_mil > 60) {
+        alert("Liczba nie należy do przedziału <20,60>!");
+    }
+    var l2_t_mil = parseInt(prompt("Podaj drugą liczbę (od 20 do 60):"));
+    if (l2_t_mil < 20 || l2_t_mil > 60) {
+        alert("Liczba nie należy do przedziału <20,60>!");
+    }
+    var pocz_mil = parseInt(prompt("Podaj początkową wielkość tekstu w px:"));
+    var tekst_mil = prompt("Podaj dowolny tekst:");
+    if (l1_t_mil < l2_t_mil) {
+        document.write("<h3>Zwiększanie rozmiaru tekstu:</h3>");
+        for (var i = pocz_mil; i <= 100; i += 5) {
+            document.write("<div style='font-size:" + i + "px'>" + tekst_mil + "</div>");
+        }
+    }
+    else {
+        document.write("<h3>Zmniejszanie rozmiaru tekstu:</h3>");
+        for (var i = pocz_mil; i >= 0; i -= 5) {
+            document.write("<div style='font-size:" + i + "px'>" + tekst_mil + "</div>");
+        }
+    }
+</script>
+
+</body>
+</html>
